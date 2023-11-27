@@ -1,0 +1,31 @@
+.slider-gutter {
+    white-space: nowrap;
+    background-color: #222;
+    overflow: hidden;
+}
+
+.slider {
+    padding-block: 25px;
+    font-size: 25px;
+    font-weight: 700;
+    animation: words-slider 20s linear infinite;
+    display: inline-block;
+}
+
+.slider span {
+    margin: 0 40px;
+}
+
+.slider ion-icon {
+    font-size: 30px;
+}
+
+@keyframes words-slider {
+    from {
+        transform: translateX(-100%);
+    }
+
+    to {
+        transform: translateX(0%);
+    }
+}
