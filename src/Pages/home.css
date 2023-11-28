@@ -8,7 +8,7 @@
     padding-block: 25px;
     font-size: 25px;
     font-weight: 700;
-    animation: words-slider 20s linear infinite;
+    animation: words-slider 10s linear infinite;
     display: inline-block;
 }
 
@@ -16,9 +16,33 @@
     margin: 0 40px;
 }
 
+.slider-2 {
+    animation-duration: 22s;
+}
+
 .slider ion-icon {
     font-size: 30px;
 }
+
+ion-icon[name='arrow-forward-outline'] {
+    transform: rotateZ(-40deg);
+    font-size: 20px !important;
+    padding: 10px;
+    width: 20px;
+    height: 20px;
+    border: 2px solid white;
+    border-radius: 50%;
+}
+
+ion-icon[name='arrow-forward-outline']:hover {
+    color: black;
+    /* outline: 2px solid black;
+  outline-offset: -2px; */
+    background-color: white;
+    transform: scale(1.5) rotateZ(-50deg);
+    /* box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.3) inset, 0 0 20px #91ff00; */
+}
+
 
 @keyframes words-slider {
     from {

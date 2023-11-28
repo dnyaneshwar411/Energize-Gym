@@ -24,11 +24,11 @@ export default function Home() {
                     <img src={heroWoman} alt="woman working out" className="absolute top-[70%] left-1/2" />
                 </div>
             </div>
-            <div className="my-[32px] slider-gutter rotate-[1.5deg] translate-y-[30px]">
-                {[1, 2].map((item) => <Slider key={item} classes={`slider text-black border-t-[10px] border-b-[10px] bg-[#fff] border-gray-800`} />)}
+            <div className="my-[32px] slider-gutter rotate-[1.5deg] translate-y-[70px]">
+                {[1, 2].map((num) => <Slider key={num} classes={`slider text-black border-t-[10px] border-b-[10px] bg-[#fff] border-gray-800`} />)}
             </div>
             <div className="slider-gutter rotate-[-1deg]">
-                {[1, 2].map((item) => <Slider key={item} classes={`slider text-black border-t-[10px] border-b-[10px] bg-[#90FF00] border-gray-800`} />)}
+                {[1, 2].map((num) => <Slider key={num} classes={`slider slider-2 text-black border-t-[10px] border-b-[10px] bg-[#90FF00] border-gray-800`} />)}
             </div>
         </>
     )
