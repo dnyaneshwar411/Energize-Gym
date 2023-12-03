@@ -43,7 +43,7 @@ function App() {
         </div> */}
         <div className="flex flex-wrap md:flex-nowrap gap-y-[2rem] md:gap-[2rem] my-[80px]">
           <div className="w-full md:w-1/2">
-            <img src={logo} alt="Energize website logo" className='float-left w-[80px] mr-5' />
+            <img src={logo} alt="Energize website logo" className='float-left w-[40px] mr-5' />
             <p className="inline text-[16px] lg:text-[20px]">Embark on a transformative journey with Energize. Every workout here is a step toward a healthier, happier you.</p>
           </div>
           <ul className='w-full sm:w-1/2 md:w-1/4 '>

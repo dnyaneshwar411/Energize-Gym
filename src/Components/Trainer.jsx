@@ -6,7 +6,6 @@ export default function Trainer({ trainer }) {
         const observer = new IntersectionObserver((entries) => {
             const [entry] = entries;
             if (entry.isIntersecting) {
-                console.log(container.current)
                 container.current.classList.add('image-pop-out');
                 observer.unobserve(entry.target);
             }
