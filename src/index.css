@@ -7,6 +7,7 @@
   padding: 0;
   box-sizing: border-box;
   transition: all 0.3s;
+  overflow-x: hidden;
 }
 
 :root {
@@ -14,7 +15,7 @@
 }
 
 body {
-  font-size: 16px;
+  font-size: 20px;
   color: white;
   background-color: #000;
   overflow-x: hidden;
@@ -37,7 +38,8 @@ h2 {
   width: max-content;
   font-size: 34px;
   position: relative;
-  margin-inline: auto;
+  margin: 150px auto 50px;
+  /* wor */
 }
 
 h2::before,
@@ -102,7 +104,7 @@ nav {
 
 nav ion-icon {
   display: none;
-  z-index: 10;
+  z-index: 15;
 }
 
 button {
@@ -112,8 +114,15 @@ button {
 }
 
 .btn-primary {
-  color: black;
-  background-color: white;
+  color: #000;
+  background-color: #fff;
+}
+
+.btn-highlighter {
+  font-weight: 900;
+  color: #000;
+  background-color: #90FF00;
+  padding: 10px 24px;
 }
 
 input {
@@ -133,6 +142,10 @@ input:focus {
   width: 65%;
   animation: carousel 15s linear infinite;
   transform: translateX(0%);
+}
+
+#testimonials .container-css .snap-mandatory::-webkit-scrollbar {
+  display: none;
 }
 
 /* Footer */
@@ -155,14 +168,24 @@ footer ion-icon[name="paper-plane-outline"] {
   transform: translate(-50%, -50%);
 }
 
-footer .socials ion-icon {
+.socials ion-icon {
   font-size: 25px;
   margin-inline: 5px;
   color: #556175;
 }
 
-footer .socials ion-icon:hover {
+.socials ion-icon:hover {
   color: white;
+}
+
+@media (max-width: 618px) {
+  body {
+    font-size: 16px;
+  }
+
+  h2 {
+    font-size: 30px;
+  }
 }
 
 @media (max-width: 750px) {
@@ -176,7 +199,7 @@ footer .socials ion-icon:hover {
     background-color: #111;
     flex-direction: column;
     justify-content: center;
-    z-index: 10;
+    z-index: 15;
   }
 
   .nav-toggle {
@@ -186,10 +209,34 @@ footer .socials ion-icon:hover {
   nav ion-icon {
     display: block;
   }
+
+  .body-toggle {
+    overflow-y: hidden !important;
+  }
 }
 
 @media (max-width: 1300px) {
   :root {
-    --padding-inline: 1rem;
+    --padding-inline: 30px;
   }
+}
+
+/* animations */
+.image-snap {
+  height: 0;
+  width: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+}
+
+.image-snap-full img {
+  transition-duration: 350ms;
+  height: 100% !important;
+  width: 100% !important;
+}
+
+.image-pop-out img {
+  transition-duration: 300ms;
+  transform: scale(1);
 }

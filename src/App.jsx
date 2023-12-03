@@ -11,15 +11,20 @@ function App() {
   const navItemClick = function (e) {
     nav.current.classList.remove('nav-toggle');
   }
+
+  const onMenuClick = function () {
+    nav.current.classList.toggle('nav-toggle');
+    document.body.style.overflow = 'hidden';
+  }
   return (
     <>
       <nav className='flex gap-8 py-6 secondary-font items-center container-css'>
-        <div className='secondary-font text-4xl mr-auto'><NavLink to="/">ENERGIZE</NavLink></div>
+        <div className='secondary-font text-[28px] mr-auto'><NavLink to="/">ENERGIZE</NavLink></div>
         <ul ref={nav} className='list-none gap-8 flex items-center'>
           {links.map(item => (<li onClick={e => navItemClick(e)} key={item.id} className={'font-medium text-slate-400 hover:text-white'} > <NavLink to={item.link}>{item.title}</NavLink></li>))}
         </ul>
         <button className="btn-primary">Join</button>
-        <ion-icon name="menu-outline" onClick={() => nav.current.classList.toggle('nav-toggle')}></ion-icon>
+        <ion-icon name="menu-outline" onClick={() => onMenuClick()}></ion-icon>
       </nav >
       <Routes>
         <Route path="/" element={<Home />} />
@@ -28,18 +33,18 @@ function App() {
         <Route path="/facilities" element="facilities" />
       </Routes >
       <footer className='container-css'>
-        <div className="news-letter">
+        {/* <div className="news-letter">
           <span className="text-highlighter">Your commitment, our passion </span>
           <h3 className='mb-4 mt-2'>NEWSLETTER</h3>
           <div className='relative'>
             <input type="text" placeholder='Email' />
             <ion-icon name="paper-plane-outline"></ion-icon>
           </div>
-        </div>
+        </div> */}
         <div className="flex flex-wrap md:flex-nowrap gap-y-[2rem] md:gap-[2rem] my-[80px]">
           <div className="w-full md:w-1/2">
             <img src={logo} alt="Energize website logo" className='float-left w-[80px] mr-5' />
-            <p className="inline">Embark on a transformative journey with Energize. Every workout here is a step toward a healthier, happier you.</p>
+            <p className="inline text-[16px] lg:text-[20px]">Embark on a transformative journey with Energize. Every workout here is a step toward a healthier, happier you.</p>
           </div>
           <ul className='w-full sm:w-1/2 md:w-1/4 '>
             {links.map(link => (<li key={link.id} className='secondary-font text-slate-500 text-[20px] hover:text-white'><NavLink to={link.link}>{link.title}</NavLink></li>))}

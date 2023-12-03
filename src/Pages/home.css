@@ -34,6 +34,31 @@ ion-icon[name='arrow-forward-outline'] {
     border-radius: 50%;
 }
 
+.class:hover img,
+.trainer:hover img {
+    opacity: 20%;
+}
+
+.class:hover :is(.transform-on-hover, h3),
+.trainer:hover :is(.transform-on-hover, h4) {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.trainer:hover .trainer-content {
+    transform: translateY(-20%);
+    background-image: none;
+}
+
+.trainer:hover h4 {
+    font-size: 25px;
+}
+
+.class-info,
+.trainer-content {
+    background-image: linear-gradient(to top, #000, 60%, transparent);
+}
+
 ion-icon[name='arrow-forward-outline']:hover {
     color: black;
     /* outline: 2px solid black;
@@ -43,6 +68,9 @@ ion-icon[name='arrow-forward-outline']:hover {
     /* box-shadow: 0 0 50px rgba(255, 255, 255, 0.8), 0 0 20px rgba(255, 255, 255, 0.3) inset, 0 0 20px #91ff00; */
 }
 
+.transform-on-hover ion-icon {
+    font-size: 20px;
+}
 
 @keyframes words-slider {
     from {
@@ -51,5 +79,16 @@ ion-icon[name='arrow-forward-outline']:hover {
 
     to {
         transform: translateX(0%);
+    }
+}
+
+@media (max-width: 618px) {
+    .slider {
+        font-size: 16px;
+        padding-block: 15px;
+    }
+
+    .slider ion-icon {
+        font-size: 20px;
     }
 }
